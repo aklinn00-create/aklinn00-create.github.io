@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CS2 Coach — конфиденциальность</title>
+<meta name="description" content="Какие данные CS2 Coach хранит на твоём ПК и что получает автор."
+      data-ru="Какие данные CS2 Coach хранит на твоём ПК и что получает автор."
+      data-en="What data CS2 Coach keeps on your PC and what the author receives.">
+<meta name="theme-color" content="#080A0C">
+<link rel="icon" type="image/png" href="img/logo_icon.png">
+<link rel="stylesheet" href="site.css">
+<script>window.CC_TITLES={ru:"CS2 Coach — конфиденциальность",en:"CS2 Coach — privacy"}</script>
+<script src="site.js"></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="CS2 Coach">
+      <img src="img/logo_icon.png" alt="" width="34" height="34">
+      <span class="wm">CS2 Coach</span>
+    </a>
+    <div class="sp"></div>
+    <div class="lang" role="group" aria-label="Язык · Language">
+      <button type="button" data-l="ru" aria-pressed="true">RU</button>
+      <button type="button" data-l="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn sm cta" href="https://github.com/aklinn00-create/cs2-reports/releases/download/app/CS2Coach_Setup.exe">
+      <svg aria-hidden="true"><use href="#i-dl"/></svg><span lang="ru">Скачать</span><span lang="en">Download</span>
+    </a>
+  </div>
+</header>
+
+<main class="doc">
+  <a class="back" href="index.html"><svg aria-hidden="true"><use href="#i-back"/></svg><span lang="ru">На главную</span><span lang="en">Back to home</span></a>
+
+  <!-- ===================== RU ===================== -->
+  <div lang="ru">
+    <h1>Конфиденциальность</h1>
+    <p class="upd">Обновлено 7 октября 2026</p>
+
+    <div class="box">
+      <p><b>Коротко.</b> Демки, отчёты, ролики, цели и настройки хранятся только на твоём компьютере. Автору программы приходит немного статистики использования — ник и почта, которые ты указал, и короткие события вроде «разобран матч на Mirage». Данные не продаются и никому не передаются, рекламы нет.</p>
+    </div>
+
+    <h2>Что хранится на твоём компьютере</h2>
+    <p>Всё, что создаёт программа, лежит в папке <b>%LOCALAPPDATA%\CS2Coach</b>: разборы и отчёты, скачанные демки, ролики Highlight, цели, план, история матчей и настройки. Автор этих файлов не видит. Ключи (например, ключ ИИ-тренера) хранятся зашифрованными средствами Windows и работают только под твоей учётной записью.</p>
+
+    <h2>Что получает автор</h2>
+    <p>При первом запуске программа просит ник и почту. После этого она отправляет автору:</p>
+    <ul>
+      <li><b>Регистрацию:</b> ник, почту и SteamID, если ты привязал Steam.</li>
+      <li><b>Время в программе</b> — только пока окно открыто и ты им пользуешься.</li>
+      <li><b>Разборы:</b> карта, счёт, ADR и KAST, сколько длился разбор, сколько было файлов и был ли включён ИИ-тренер. Сами демки и отчёты не отправляются.</li>
+      <li><b>Короткие события:</b> запуск, PDF, ссылка на отчёт, обновление, вертикальный ролик.</li>
+      <li><b>Тексты ошибок</b> — без путей к файлам и без имени пользователя Windows.</li>
+      <li>К каждому событию — версия программы, версия Windows и <b>анонимный номер компьютера</b> (по нему видно, что это другой ПК, но не какой именно).</li>
+    </ul>
+    <p>Это хранится в Google-таблице автора. Читать её может только автор.</p>
+
+    <h2>Только если ты сам этого захочешь</h2>
+    <ul>
+      <li><b>«Сообщить о проблеме»</b> — твоё описание и последние записи журнала ошибок. Из них заранее убираются ключи, почты, SteamID и пути к файлам, а перед отправкой программа показывает текст целиком.</li>
+      <li><b>Лига игроков</b> — только если включишь участие: SteamID и очки. В общем топе видны твой ник из Steam и очки.</li>
+      <li><b>ИИ-тренер</b> — только с твоим ключом Anthropic: цифры матча уходят в Anthropic, чтобы получить ответ тренера.</li>
+      <li><b>Проверка игрока и уровень FACEIT</b> — на сервер CS2 Coach уходит SteamID того, кого проверяешь; сервер спрашивает Steam или FACEIT и возвращает ответ.</li>
+    </ul>
+
+    <h2>Куда программа выходит в интернет</h2>
+    <ul>
+      <li><b>Steam</b> — вход через Steam, публичный профиль и аватарка, список твоих последних матчей (через запущенный клиент Steam), демки матчей с серверов Valve.</li>
+      <li><b>GitHub</b> — проверка и загрузка обновлений, инструмент записи роликов HLAE.</li>
+      <li><b>gyan.dev</b> — FFmpeg для монтажа роликов.</li>
+      <li><b>Сервер CS2 Coach</b> (Google Apps Script) — статистика выше, вход через Steam, лига, проверка игрока, уровень FACEIT.</li>
+      <li><b>Anthropic</b> — только если ты указал свой ключ ИИ-тренера.</li>
+    </ul>
+
+    <h2>Как удалить данные</h2>
+    <p>На своём ПК: Параметры Windows → Приложения → CS2 Coach → Удалить. Программа спросит, удалить ли заодно отчёты и настройки.</p>
+    <p>У автора: напиши через «Сообщить о проблеме» (Настройки), что хочешь удалить свои данные, — автор удалит записи с твоей почтой и SteamID.</p>
+
+    <h2>Чего программа не делает</h2>
+    <ul>
+      <li>Не продаёт и не передаёт данные третьим лицам, не показывает рекламу.</li>
+      <li>Не читает пароли и переписку Steam. Из файлов Steam только читает список аккаунтов на этом ПК, контакты и бинды CS2 — ничего в них не меняет.</li>
+      <li>Не меняет настройки CS2: в папку игры кладёт только свои файлы <span class="mono">cs2coach*.cfg</span>.</li>
+    </ul>
+  </div>
+
+  <!-- ===================== EN ===================== -->
+  <div lang="en">
+    <h1>Privacy</h1>
+    <p class="upd">Updated October 7, 2026</p>
+
+    <div class="box">
+      <p><b>In short.</b> Your demos, reports, clips, goals and settings are stored only on your computer. The author receives a little usage data — the nickname and email you entered and short events like “reviewed a match on Mirage”. Data is never sold or shared, and there are no ads.</p>
+    </div>
+
+    <h2>What stays on your computer</h2>
+    <p>Everything the app creates lives in <b>%LOCALAPPDATA%\CS2Coach</b>: reviews and reports, downloaded demos, Highlight clips, goals, your plan, match history and settings. The author can’t see these files. Keys (such as the AI coach key) are encrypted with Windows and only work under your Windows account.</p>
+
+    <h2>What the author receives</h2>
+    <p>On first launch the app asks for a nickname and an email. After that it sends the author:</p>
+    <ul>
+      <li><b>Registration:</b> nickname, email and your SteamID if you linked Steam.</li>
+      <li><b>Time in the app</b> — only while the window is open and you’re using it.</li>
+      <li><b>Reviews:</b> map, score, ADR and KAST, how long the review took, how many files there were and whether the AI coach was on. Demos and reports themselves are never sent.</li>
+      <li><b>Short events:</b> app start, PDF, report link, update, vertical clip.</li>
+      <li><b>Error messages</b> — with file paths and your Windows user name removed.</li>
+      <li>With every event — the app version, Windows version and an <b>anonymous computer ID</b> (it shows it’s a different PC, not which one).</li>
+    </ul>
+    <p>This is stored in the author’s Google Sheet. Only the author can read it.</p>
+
+    <h2>Only if you choose to</h2>
+    <ul>
+      <li><b>“Report a problem”</b> — your description and the latest error log entries. Keys, emails, SteamIDs and file paths are removed first, and the app shows you the full text before sending.</li>
+      <li><b>Player league</b> — only if you join: SteamID and points. The public top shows your Steam nickname and points.</li>
+      <li><b>AI coach</b> — only with your own Anthropic key: match numbers are sent to Anthropic to get the coach’s answer.</li>
+      <li><b>Player check and FACEIT level</b> — the SteamID you’re checking goes to the CS2 Coach server, which asks Steam or FACEIT and returns the answer.</li>
+    </ul>
+
+    <h2>Where the app connects</h2>
+    <ul>
+      <li><b>Steam</b> — Steam sign-in, public profile and avatar, your recent matches list (through the running Steam client), match demos from Valve servers.</li>
+      <li><b>GitHub</b> — update checks and downloads, the HLAE clip recording tool.</li>
+      <li><b>gyan.dev</b> — FFmpeg for editing clips.</li>
+      <li><b>CS2 Coach server</b> (Google Apps Script) — the stats above, Steam sign-in, league, player check, FACEIT level.</li>
+      <li><b>Anthropic</b> — only if you entered your own AI coach key.</li>
+    </ul>
+
+    <h2>How to delete your data</h2>
+    <p>On your PC: Windows Settings → Apps → CS2 Coach → Uninstall. The app will ask whether to delete your reports and settings too.</p>
+    <p>On the author’s side: send a request through “Report a problem” (Settings) — the author will delete the records with your email and SteamID.</p>
+
+    <h2>What the app doesn’t do</h2>
+    <ul>
+      <li>Doesn’t sell or share data with third parties, doesn’t show ads.</li>
+      <li>Doesn’t read passwords or your Steam chats. From Steam files it only reads the accounts on this PC, your contacts and CS2 key binds — and never changes them.</li>
+      <li>Doesn’t change CS2 settings: it only puts its own <span class="mono">cs2coach*.cfg</span> files into the game folder.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="CS2 Coach">
+      <img src="img/logo_icon.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:8px">
+      <span class="wm" style="font-size:15px">CS2 Coach</span>
+      <span>· by Aklinn</span>
+    </a>
+    <p class="legal" lang="ru">CS2 Coach — независимый проект, не связан с Valve Corporation. Counter-Strike и CS2 — товарные знаки Valve Corporation.</p>
+    <p class="legal" lang="en">CS2 Coach is an independent project, not affiliated with Valve Corporation. Counter-Strike and CS2 are trademarks of Valve Corporation.</p>
+  </div>
+</footer>
+</body>
+</html>
