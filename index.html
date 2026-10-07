@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CS2 Coach — разбор демок CS2 как от тренера</title>
+<meta name="description" content="Бесплатная программа для Windows: сама скачивает твои матчи CS2, находит ошибки, показывает моменты на радаре, даёт тренировку в игре и записывает ролики лучших моментов."
+      data-ru="Бесплатная программа для Windows: сама скачивает твои матчи CS2, находит ошибки, показывает моменты на радаре, даёт тренировку в игре и записывает ролики лучших моментов."
+      data-en="Free Windows app: downloads your CS2 matches by itself, finds your mistakes, shows each moment on the radar, gives in-game drills and records clips of your best plays.">
+<meta name="theme-color" content="#080A0C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CS2 Coach">
+<meta property="og:description" content="Разбор демок CS2 как от тренера · CS2 demo review like a coach would">
+<link rel="icon" type="image/png" href="img/logo_icon.png">
+<link rel="preload" href="fonts/font-unbounded-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
+<script>window.CC_TITLES={ru:"CS2 Coach — разбор демок CS2 как от тренера",en:"CS2 Coach — CS2 demo review like a coach would"}</script>
+<script src="site.js"></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></symbol>
+    <symbol id="i-win" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.4 10.4 4.4v7.1H3zM11.4 4.3 21 3v8.5h-9.6zM3 12.5h7.4v7.1L3 18.6zM11.4 12.5H21V21l-9.6-1.3z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m10 9 5 3-5 3z"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.3-4.3L4 9"/><path d="M4 4v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.3L20 15"/><path d="M20 20v-5h-5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="m5 15 4.5-4.5 3.5 3L19 7"/><path d="M15 7h4v4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="3.5"/><path d="M3 20c.6-3.4 3-5.5 6-5.5s5.4 2.1 6 5.5"/><path d="M15.5 5.3a3.5 3.5 0 0 1 0 6.4"/><path d="M17.5 14.8c1.9.7 3.1 2.5 3.5 5.2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.3 2.7 2.7L16 9.6"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v9M9.5 9.8c0-1 1.1-1.6 2.5-1.6s2.5.6 2.5 1.6-1.1 1.4-2.5 1.7-2.5.8-2.5 1.8 1.1 1.7 2.5 1.7 2.5-.7 2.5-1.7"/></symbol>
+    <symbol id="i-disk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M5.5 13 8 5h8l2.5 8"/><path d="M16.5 16.5h.01"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="CS2 Coach">
+      <img src="img/logo_icon.png" alt="" width="34" height="34">
+      <span class="wm">CS2 Coach</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#features"><span lang="ru">Возможности</span><span lang="en">Features</span></a>
+      <a href="#how"><span lang="ru">Как начать</span><span lang="en">Get started</span></a>
+      <a href="#faq"><span lang="ru">Вопросы</span><span lang="en">FAQ</span></a>
+    </nav>
+    <div class="sp"></div>
+    <div class="lang" role="group" aria-label="Язык · Language">
+      <button type="button" data-l="ru" aria-pressed="true">RU</button>
+      <button type="button" data-l="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn sm cta" href="https://github.com/aklinn00-create/cs2-reports/releases/download/app/CS2Coach_Setup.exe" data-dl="note1">
+      <svg aria-hidden="true"><use href="#i-dl"/></svg><span lang="ru">Скачать</span><span lang="en">Download</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <span class="kick"><i></i><span lang="ru">Разбор демок CS2 · бесплатно</span><span lang="en">CS2 demo review · free</span></span>
+        <h1 lang="ru">Твои демки CS2&nbsp;— <em>разбор как от тренера</em></h1>
+        <h1 lang="en">Your CS2 demos, <em>reviewed like a coach would</em></h1>
+        <p class="lead" lang="ru">CS2 Coach сам скачивает твои матчи, находит ошибки, показывает каждый момент на радаре и даёт упражнения прямо в игре. Всё работает на твоём ПК — демки никуда не загружаются.</p>
+        <p class="lead" lang="en">CS2 Coach downloads your matches by itself, finds your mistakes, shows every moment on the radar and gives you drills right inside the game. Everything runs on your PC — your demos are never uploaded.</p>
+        <div class="cta-row">
+          <a class="btn big cta" href="https://github.com/aklinn00-create/cs2-reports/releases/download/app/CS2Coach_Setup.exe" data-dl="note1">
+            <svg aria-hidden="true"><use href="#i-win"/></svg><span lang="ru">Скачать для Windows</span><span lang="en">Download for Windows</span>
+          </a>
+          <a class="btn big" href="#features"><span lang="ru">Что умеет</span><span lang="en">What it does</span></a>
+        </div>
+        <p class="pc-only" lang="ru">Это программа для компьютера с Windows — открой страницу на ПК, чтобы скачать.</p>
+        <p class="pc-only" lang="en">This is a Windows PC app — open this page on your computer to download it.</p>
+        <div class="meta">
+          <span><svg aria-hidden="true"><use href="#i-gift"/></svg><span lang="ru">Бесплатно, без рекламы</span><span lang="en">Free, no ads</span></span>
+          <span><svg aria-hidden="true"><use href="#i-win"/></svg><span lang="ru">Windows 10 / 11, 64-бит</span><span lang="en">Windows 10 / 11, 64-bit</span></span>
+          <span><svg aria-hidden="true"><use href="#i-disk"/></svg><span lang="ru">≈100 МБ</span><span lang="en">≈100 MB</span></span>
+          <span><svg aria-hidden="true"><use href="#i-globe"/></svg><span lang="ru">Русский · English</span><span lang="en">English · Русский</span></span>
+        </div>
+        <div class="dl-note" id="note1" role="status">
+          <p lang="ru"><b>Загрузка началась.</b> Запусти <span class="mono">CS2Coach_Setup.exe</span>. Если Windows покажет «Windows защитил ваш компьютер» — нажми «Подробнее» → «Выполнить в любом случае». Права администратора не нужны.</p>
+          <p lang="en"><b>Download started.</b> Run <span class="mono">CS2Coach_Setup.exe</span>. If Windows shows “Windows protected your PC”, click “More info” → “Run anyway”. No admin rights needed.</p>
+        </div>
+      </div>
+      <div class="shot rv">
+        <img lang="ru" src="img/app_dash_ru.webp" width="1600" height="900" loading="lazy" alt="Главная страница CS2 Coach: навыки, следующее улучшение, последний матч">
+        <img lang="en" src="img/app_dash_en.webp" width="1600" height="900" loading="lazy" alt="CS2 Coach home page: skills, next improvement, last match">
+      </div>
+      <div class="facts rv">
+        <div class="fact"><div class="n">10+</div><div class="l" lang="ru">разделов в каждом отчёте</div><div class="l" lang="en">sections in every report</div></div>
+        <div class="fact"><div class="n">150+</div><div class="l" lang="ru">матчей профи — эталон для сравнения</div><div class="l" lang="en">pro matches as the benchmark</div></div>
+        <div class="fact"><div class="n" lang="ru">до 3</div><div class="n" lang="en">up to 3</div><div class="l" lang="ru">роликов с лучшими моментами матча</div><div class="l" lang="en">highlight clips per match</div></div>
+        <div class="fact"><div class="n" lang="ru">0 ₽</div><div class="n" lang="en">$0</div><div class="l" lang="ru">без подписки и рекламы</div><div class="l" lang="en">no subscription, no ads</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="sh c rv">
+        <div class="lab"><span lang="ru">Возможности</span><span lang="en">Features</span></div>
+        <h2 lang="ru">От разбора матча&nbsp;— к тренировке и обратно</h2>
+        <h2 lang="en">From match review to practice and back</h2>
+        <p lang="ru">Программа не просто считает цифры: она объясняет, почему ты проиграл раунд, и даёт, что тренировать.</p>
+        <p lang="en">It doesn’t just count numbers: it explains why you lost the round and tells you what to practice.</p>
+      </div>
+      <div class="grid3">
+        <article class="card rv">
+          <div class="ic"><svg aria-hidden="true"><use href="#i-target"/></svg></div>
+          <h3 lang="ru">Разбор как от тренера</h3><h3 lang="en">A coach-style review</h3>
+          <p lang="ru">Ошибки с объяснением: почему проиграл дуэль и что делать вместо. Каждый момент — на радаре: где стоял ты, где враг, куда смотрел прицел.</p>
+          <p lang="en">Mistakes explained: why you lost the duel and what to do instead. Every moment on the radar — where you stood, where the enemy was, where your crosshair pointed.</p>
+          <ul lang="ru"><li>Оценка матча A+…E и рейтинг 2.0</li><li>Сравнение с лобби и с уровнем профи</li><li>2D-повтор раундов</li></ul>
+          <ul lang="en"><li>Match grade A+…E and Rating 2.0</li><li>Compared with your lobby and pro level</li><li>2D round replay</li></ul>
+        </article>
+        <article class="card rv">
+          <div class="ic"><svg aria-hidden="true"><use href="#i-play"/></svg></div>
+          <h3 lang="ru">Тренировка в самой CS2</h3><h3 lang="en">Practice inside CS2</h3>
+          <p lang="ru">Программа кладёт в CS2 свой конфиг: на NumPad — места твоих смертей, позиции и раскидки профи. Зашёл на карту — и отрабатываешь именно свои ошибки.</p>
+          <p lang="en">The app adds its own config to CS2: NumPad keys take you to the spots where you died, pro positions and pro lineups. Load the map and drill exactly your mistakes.</p>
+          <ul lang="ru"><li>Раскидки профи на 8 картах</li><li>Квизы по позициям и раскидкам</li><li>План на неделю под твоё время</li></ul>
+          <ul lang="en"><li>Pro lineups on 8 maps</li><li>Quizzes on positions and lineups</li><li>Weekly plan that fits your schedule</li></ul>
+        </article>
+        <article class="card rv">
+          <div class="ic"><svg aria-hidden="true"><use href="#i-film"/></svg></div>
+          <h3>Highlight</h3>
+          <p lang="ru">После игры программа сама записывает до 3 роликов: эйсы, выигранные клатчи, 3K и 4K. Из любого — вертикальная версия для TikTok и Shorts в один клик.</p>
+          <p lang="en">After you play, the app records up to 3 clips by itself: aces, won clutches, 3Ks and 4Ks. Turn any of them into a vertical TikTok / Shorts video in one click.</p>
+          <ul lang="ru"><li>1080p, 60 кадров, от твоего лица</li><li>Звук игры, без чужой музыки</li><li>Плашка с твоим ником</li></ul>
+          <ul lang="en"><li>1080p at 60 fps, first-person</li><li>Game audio, no third-party music</li><li>Your nickname on the intro card</li></ul>
+        </article>
+        <article class="card rv">
+          <div class="ic"><svg aria-hidden="true"><use href="#i-sync"/></svg></div>
+          <h3 lang="ru">Матчи подтягиваются сами</h3><h3 lang="en">Matches arrive by themselves</h3>
+          <p lang="ru">Войди через Steam — последние матчи Премьера и соревновательного режима скачаются и разберутся без кнопок. Демки FACEIT и любые другие — просто перетащи в окно.</p>
+          <p lang="en">Sign in with Steam — your latest Premier and Competitive matches download and get reviewed with no clicks. FACEIT and any other demos — just drag them into the window.</p>
+          <ul lang="ru"><li>.dem и архивы .zst, .gz, .bz2, .zip, .rar</li><li>Авторазбор новых демок</li><li>Уведомление, когда отчёт готов</li></ul>
+          <ul lang="en"><li>.dem and .zst, .gz, .bz2, .zip, .rar archives</li><li>New demos are reviewed automatically</li><li>A notification when the report is ready</li></ul>
+        </article>
+        <article class="card rv">
+          <div class="ic"><svg aria-hidden="true"><use href="#i-chart"/></svg></div>
+          <h3 lang="ru">Прогресс и уровень</h3><h3 lang="en">Progress and level</h3>
+          <p lang="ru">ELO как на FACEIT: зависит не только от победы, но и от того, как ты сыграл. Цели из твоих же ошибок и «Мой профиль» с формой, винрейтом и сильными сторонами.</p>
+          <p lang="en">FACEIT-style ELO that depends not only on the win but on how you played. Goals built from your own mistakes and a profile with form, win rate and strengths.</p>
+          <ul lang="ru"><li>Цель засчитана — 5 матчей подряд</li><li>Статистика за всё время</li><li>Лига игроков CS2 Coach</li></ul>
+          <ul lang="en"><li>A goal counts after 5 matches in a row</li><li>All-time stats</li><li>CS2 Coach player league</li></ul>
+        </article>
+        <article class="card rv">
+          <div class="ic"><svg aria-hidden="true"><use href="#i-users"/></svg></div>
+          <h3 lang="ru">Друзья и проверка игрока</h3><h3 lang="en">Friends and player check</h3>
+          <p lang="ru">Сравни себя с друзьями, с которыми играл: рейтинг, ADR, частые ошибки. Проверка аккаунта соперника — VAC, возраст, часы — и его игры по демке на странности.</p>
+          <p lang="en">Compare yourself with friends you played with: rating, ADR, common mistakes. Check an opponent’s account — VAC, age, hours — and look for oddities in their play from the demo.</p>
+          <ul lang="ru"><li>Ты · друг · профи — в одной таблице</li><li>Разбор матча глазами друга</li><li>Без громких ярлыков — только факты</li></ul>
+          <ul lang="en"><li>You · friend · pro side by side</li><li>Review a match from a friend’s view</li><li>No loud labels — just facts</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="show">
+        <div class="show-t rv">
+          <div class="lab"><span lang="ru">Отчёт</span><span lang="en">Report</span></div>
+          <h2 lang="ru">Один матч&nbsp;— один понятный отчёт</h2>
+          <h2 lang="en">One match&nbsp;— one clear report</h2>
+          <p lang="ru">Главное за 30 секунд: итоговая оценка, что получилось и что мешало. Дальше — по разделам: таблица матча, ошибки, раунды, стрельба, гранаты, экономика.</p>
+          <p lang="en">The essentials in 30 seconds: your grade, what worked and what got in the way. Then section by section: scoreboard, mistakes, rounds, shooting, grenades, economy.</p>
+          <ul class="checks" lang="ru">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Каждая ошибка — с моментом на радаре и советом, что делать</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Твои цифры против лобби и уровня профи</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Открывается в браузере, работает без интернета, сохраняется в PDF</li>
+          </ul>
+          <ul class="checks" lang="en">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Every mistake comes with the moment on the radar and a fix</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Your numbers vs your lobby and pro level</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Opens in a browser, works offline, saves to PDF</li>
+          </ul>
+        </div>
+        <div class="frame rv">
+          <img lang="ru" src="img/report_ru.webp" width="1120" height="1000" loading="lazy" alt="Отчёт по матчу: оценка, K/D, ADR, рейтинг 2.0 и разбор по направлениям">
+          <img lang="en" src="img/report_en.webp" width="1120" height="1000" loading="lazy" alt="Match report: grade, K/D, ADR, Rating 2.0 and breakdown by area">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="show rev">
+        <div class="show-t rv">
+          <div class="lab"><span lang="ru">Гранаты</span><span lang="en">Grenades</span></div>
+          <h2 lang="ru">Раскидки профи&nbsp;— и сразу в игру</h2>
+          <h2 lang="en">Pro lineups&nbsp;— straight into the game</h2>
+          <p lang="ru">Откуда бросать, куда падает и как: в прыжке, с места или с разбега. Кнопка «В CS2» готовит тренировку: точка броска, граната в руке, прицел наведён.</p>
+          <p lang="en">Where to throw from, where it lands and how: jump-throw, standing or running. The “In CS2” button sets up the drill: throw spot, grenade in hand, crosshair aimed.</p>
+          <ul class="checks" lang="ru">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Раскидки собраны из реальных матчей профи</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Твои гранаты против профи: урон, гранат за раунд, смерти с гранатой в кармане</li>
+          </ul>
+          <ul class="checks" lang="en">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Lineups collected from real pro matches</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Your utility vs pros: damage, grenades per round, deaths with utility unused</li>
+          </ul>
+        </div>
+        <div class="frame rv">
+          <img lang="ru" src="img/app_nades_ru.webp" width="1600" height="900" loading="lazy" alt="Раздел «Гранаты»: раскидки профи на радаре Dust2">
+          <img lang="en" src="img/app_nades_en.webp" width="1600" height="900" loading="lazy" alt="Grenades section: pro lineups on the Dust2 radar">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="show">
+        <div class="show-t rv">
+          <div class="lab">Highlight</div>
+          <h2 lang="ru">Лучшие моменты&nbsp;— уже готовые ролики</h2>
+          <h2 lang="en">Your best plays&nbsp;— as ready-made clips</h2>
+          <p lang="ru">Программа ждёт, пока ты закроешь CS2, и сама записывает ролики из демки от твоего лица. Монтаж, замедление на последнем фраге и плашка с ником — уже внутри.</p>
+          <p lang="en">The app waits until you close CS2, then records clips from the demo in first person by itself. Editing, slow-mo on the last kill and your nickname card are already in.</p>
+          <ul class="checks" lang="ru">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Горизонтальный 1080p60 и вертикальный 9:16 для TikTok / Shorts</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Хранятся на твоём ПК, старые ролики удаляются сами</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Нужны Steam и CS2; запись идёт, только когда ты не играешь</li>
+          </ul>
+          <ul class="checks" lang="en">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Landscape 1080p60 and vertical 9:16 for TikTok / Shorts</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Stored on your PC, old clips are cleaned up automatically</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Needs Steam and CS2; recording runs only while you’re not playing</li>
+          </ul>
+        </div>
+        <div class="phone-wrap rv">
+          <div class="phone">
+            <img lang="ru" src="img/vertical_ru.webp" width="540" height="960" loading="lazy" alt="Кадр вертикального ролика: 3K на Dust2">
+            <img lang="en" src="img/vertical_en.webp" width="540" height="960" loading="lazy" alt="Vertical clip frame: 3K on Dust2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sh c rv">
+        <div class="lab"><span lang="ru">Как начать</span><span lang="en">Get started</span></div>
+        <h2 lang="ru">Три шага до первого разбора</h2>
+        <h2 lang="en">Three steps to your first review</h2>
+      </div>
+      <div class="steps">
+        <div class="step rv"><div class="num">1</div>
+          <h3 lang="ru">Скачай и установи</h3><h3 lang="en">Download and install</h3>
+          <p lang="ru">Установщик ставит программу в твою папку пользователя — права администратора не нужны.</p>
+          <p lang="en">The installer puts the app into your user folder — no admin rights needed.</p>
+        </div>
+        <div class="step rv"><div class="num">2</div>
+          <h3 lang="ru">Войди через Steam</h3><h3 lang="en">Sign in with Steam</h3>
+          <p lang="ru">Матчи из CS2 подтянутся сами. Или перетащи в окно любую демку — FACEIT, турнирную, свою.</p>
+          <p lang="en">Your CS2 matches come in by themselves. Or drag any demo into the window — FACEIT, tournament, your own.</p>
+        </div>
+        <div class="step rv"><div class="num">3</div>
+          <h3 lang="ru">Открой отчёт</h3><h3 lang="en">Open the report</h3>
+          <p lang="ru">Смотри ошибки, тренируй их в игре и следи, как растёт уровень от матча к матчу.</p>
+          <p lang="en">See your mistakes, drill them in game and watch your level grow match after match.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="priv rv">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-lock"/></svg></div>
+        <div>
+          <h2 lang="ru">Твои данные&nbsp;— на твоём ПК</h2>
+          <h2 lang="en">Your data stays on your PC</h2>
+          <p lang="ru">Демки, отчёты, ролики и цели хранятся только у тебя. Автору приходит минимум статистики — и только после регистрации в программе. Ничего не продаём, рекламы нет.</p>
+          <p lang="en">Demos, reports, clips and goals are stored only on your PC. The author receives minimal usage stats — and only after you register in the app. Nothing is sold, there are no ads.</p>
+        </div>
+        <a class="btn" href="privacy.html"><span lang="ru">Подробнее</span><span lang="en">Details</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sh c rv">
+        <div class="lab"><span lang="ru">Вопросы</span><span lang="en">FAQ</span></div>
+        <h2 lang="ru">Частые вопросы</h2>
+        <h2 lang="en">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary><span lang="ru">Это правда бесплатно?</span><span lang="en">Is it really free?</span></summary>
+          <div class="a">
+            <p lang="ru">Да: без подписки и без рекламы. ИИ-тренер — по желанию и работает с твоим ключом Anthropic: один разбор стоит примерно $0,05–0,10, платишь напрямую Anthropic. Без ключа всё остальное работает полностью.</p>
+            <p lang="en">Yes: no subscription and no ads. The AI coach is optional and uses your own Anthropic key: one review costs about $0.05–0.10, paid directly to Anthropic. Without a key everything else works in full.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span lang="ru">Не забанят ли меня (VAC)?</span><span lang="en">Can I get banned (VAC)?</span></summary>
+          <div class="a">
+            <p lang="ru">Программа не вмешивается в игру во время матча: она читает демки, которые CS2 уже сохранила. Тренировочный конфиг работает на твоём локальном сервере.</p>
+            <p lang="ru">Для роликов Highlight программа запускает CS2 через HLAE с ключом <code>-insecure</code> — в этом режиме игра вообще не подключается к серверам с VAC. Так записывают ролики мувимейкеры. Запись идёт только когда CS2 закрыта, то есть когда ты не играешь.</p>
+            <p lang="en">The app doesn’t touch the game during a match: it reads demos CS2 has already saved. The practice config runs on your local server.</p>
+            <p lang="en">For Highlight clips the app starts CS2 through HLAE with the <code>-insecure</code> flag — in this mode the game doesn’t connect to VAC-secured servers at all. That’s how movie makers record clips. Recording only starts when CS2 is closed, i.e. when you’re not playing.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span lang="ru">Windows пишет «Windows защитил ваш компьютер»</span><span lang="en">Windows says “Windows protected your PC”</span></summary>
+          <div class="a">
+            <p lang="ru">У программы пока нет платной цифровой подписи, поэтому фильтр SmartScreen её ещё не знает. Нажми «Подробнее» → «Выполнить в любом случае».</p>
+            <p lang="ru">Если в Windows 11 включено «Интеллектуальное управление приложениями», оно может не пустить установщик совсем. Подпись программы — в планах.</p>
+            <p lang="en">The app doesn’t have a paid code signature yet, so SmartScreen doesn’t know it. Click “More info” → “Run anyway”.</p>
+            <p lang="en">If Smart App Control is on in Windows 11, it may block the installer completely. Code signing is planned.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span lang="ru">Что нужно для работы?</span><span lang="en">What do I need?</span></summary>
+          <div class="a">
+            <p lang="ru">Windows 10 или 11 (64-бит). Для автоскачивания матчей и записи роликов — Steam и установленная CS2. Разбор демок, которые у тебя уже есть, работает и без них.</p>
+            <p lang="en">Windows 10 or 11 (64-bit). To download matches automatically and record clips — Steam and CS2 installed. Reviewing demos you already have works without them.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span lang="ru">Какие демки подходят?</span><span lang="en">Which demos are supported?</span></summary>
+          <div class="a">
+            <p lang="ru">Любые демки CS2 (.dem): Премьер, соревновательный, FACEIT, турнирные — и архивы .zst, .gz, .bz2, .zip, .rar. Демки CS:GO не поддерживаются.</p>
+            <p lang="en">Any CS2 demo (.dem): Premier, Competitive, FACEIT, tournament — plus .zst, .gz, .bz2, .zip, .rar archives. CS:GO demos are not supported.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span lang="ru">Есть английский язык?</span><span lang="en">Is there a Russian version?</span></summary>
+          <div class="a">
+            <p lang="ru">Да. Весь интерфейс и отчёты — на русском и английском. Язык выбирается по Windows, переключить можно кнопкой RU / EN в верхней строке.</p>
+            <p lang="en">Yes. The whole interface and all reports come in English and Russian. The language follows Windows; switch it any time with the RU / EN button at the top.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span lang="ru">Как обновляться?</span><span lang="en">How do updates work?</span></summary>
+          <div class="a">
+            <p lang="ru">Программа сама проверяет обновления и ставит их поверх — отчёты и настройки остаются. Обновления подписаны: подменённое обновление программа не примет.</p>
+            <p lang="en">The app checks for updates by itself and installs them on top — your reports and settings stay. Updates are signed: the app won’t accept a tampered update.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span lang="ru">Как удалить?</span><span lang="en">How do I uninstall?</span></summary>
+          <div class="a">
+            <p lang="ru">Параметры Windows → Приложения → CS2 Coach → Удалить. Программа спросит, удалить ли заодно отчёты и настройки.</p>
+            <p lang="en">Windows Settings → Apps → CS2 Coach → Uninstall. The app will ask whether to delete your reports and settings too.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="final rv">
+        <h2 lang="ru">Следующая демка&nbsp;— уже с разбором</h2>
+        <h2 lang="en">Your next demo&nbsp;— already reviewed</h2>
+        <p lang="ru">Скачай CS2 Coach, войди через Steam и открой отчёт по последнему матчу.</p>
+        <p lang="en">Download CS2 Coach, sign in with Steam and open the report on your last match.</p>
+        <a class="btn big cta" href="https://github.com/aklinn00-create/cs2-reports/releases/download/app/CS2Coach_Setup.exe" data-dl="note2">
+          <svg aria-hidden="true"><use href="#i-win"/></svg><span lang="ru">Скачать для Windows</span><span lang="en">Download for Windows</span>
+        </a>
+        <div class="dl-note" id="note2" role="status">
+          <p lang="ru"><b>Загрузка началась.</b> Если Windows покажет «Windows защитил ваш компьютер» — нажми «Подробнее» → «Выполнить в любом случае».</p>
+          <p lang="en"><b>Download started.</b> If Windows shows “Windows protected your PC”, click “More info” → “Run anyway”.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="CS2 Coach">
+      <img src="img/logo_icon.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:8px">
+      <span class="wm" style="font-size:15px">CS2 Coach</span>
+      <span>· by Aklinn</span>
+    </a>
+    <nav aria-label="Ссылки">
+      <a href="#features"><span lang="ru">Возможности</span><span lang="en">Features</span></a>
+      <a href="#faq"><span lang="ru">Вопросы</span><span lang="en">FAQ</span></a>
+      <a href="privacy.html"><span lang="ru">Конфиденциальность</span><span lang="en">Privacy</span></a>
+    </nav>
+    <p class="legal" lang="ru">CS2 Coach — независимый проект, не связан с Valve Corporation. Counter-Strike и CS2 — товарные знаки Valve Corporation.</p>
+    <p class="legal" lang="en">CS2 Coach is an independent project, not affiliated with Valve Corporation. Counter-Strike and CS2 are trademarks of Valve Corporation.</p>
+  </div>
+</footer>
+</body>
+</html>
