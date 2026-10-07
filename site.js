@@ -1,4 +1,4 @@
-/* CS2 Coach — сайт: язык RU/EN, шапка, появление блоков, подсказка после «Скачать». Без внешних библиотек. */
+/* Debrief — сайт: язык RU/EN, шапка, появление блоков, подсказка после «Скачать». Без внешних библиотек. */
 (function () {
   var TITLES = window.CC_TITLES || {};
   function store(v) { try { if (v) localStorage.setItem("cc_lang", v); return localStorage.getItem("cc_lang"); } catch (e) { return null; } }
