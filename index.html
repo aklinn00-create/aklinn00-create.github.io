@@ -82,10 +82,13 @@
           <span><svg aria-hidden="true"><use href="#i-win"/></svg><span lang="ru">Windows 10 / 11, 64-бит</span><span lang="en">Windows 10 / 11, 64-bit</span></span>
           <span><svg aria-hidden="true"><use href="#i-disk"/></svg><span lang="ru">≈100 МБ</span><span lang="en">≈100 MB</span></span>
           <span><svg aria-hidden="true"><use href="#i-globe"/></svg><span lang="ru">Русский · English</span><span lang="en">English · Русский</span></span>
+          <span><svg aria-hidden="true"><use href="#i-shield"/></svg><a class="vlink" href="#verify" data-open="verify"><span lang="ru">Версия <b data-dl="ver">2.6.1</b> · проверить подлинность</span><span lang="en">Version <b data-dl="ver">2.6.1</b> · verify the file</span></a></span>
         </div>
         <div class="dl-note" id="note1" role="status">
           <p lang="ru"><b>Загрузка началась.</b> Запусти <span class="mono">CS2Coach_Setup.exe</span>. Если Windows покажет «Windows защитил ваш компьютер» — нажми «Подробнее» → «Выполнить в любом случае». Права администратора не нужны.</p>
           <p lang="en"><b>Download started.</b> Run <span class="mono">CS2Coach_Setup.exe</span>. If Windows shows “Windows protected your PC”, click “More info” → “Run anyway”. No admin rights needed.</p>
+          <p lang="ru" class="dl-safe">Скачивай только с этого сайта. Как проверить файл — <a href="#verify" data-open="verify">здесь</a>.</p>
+          <p lang="en" class="dl-safe">Only download from this site. How to verify the file — <a href="#verify" data-open="verify">here</a>.</p>
         </div>
       </div>
       <div class="shot rv">
@@ -297,6 +300,20 @@
         <h2 lang="en">Frequently asked questions</h2>
       </div>
       <div class="faq">
+        <details id="verify">
+          <summary><span lang="ru">Как убедиться, что установщик настоящий?</span><span lang="en">How do I know the installer is genuine?</span></summary>
+          <div class="a">
+            <p lang="ru"><b>Скачивай Debrief только с этого сайта</b> — aklinn00-create.github.io. «Премиум», «взломанных» или «с читами» версий не существует: такой файл — всегда вирус. Программа <b>никогда не спрашивает логин и пароль Steam</b>: вход только на странице самого Steam (steamcommunity.com).</p>
+            <p lang="en"><b>Only download Debrief from this site</b> — aklinn00-create.github.io. There are no “premium”, “cracked” or “with cheats” versions: such a file is always a virus. The app <b>never asks for your Steam login or password</b>: you sign in only on Steam’s own page (steamcommunity.com).</p>
+            <p lang="ru">Проверить сам файл: открой PowerShell и выполни команду — строка <b>Hash</b> должна совпасть с контрольной суммой ниже.</p>
+            <p lang="en">To check the file itself, open PowerShell and run the command — the <b>Hash</b> line must match the checksum below.</p>
+            <div class="cmd" translate="no">Get-FileHash "$env:USERPROFILE\Downloads\CS2Coach_Setup.exe"</div>
+            <p><span lang="ru">SHA-256 установщика версии <b data-dl="ver">2.6.1</b> (<span data-dl="size">—</span>):</span><span lang="en">SHA-256 of the version <b data-dl="ver">2.6.1</b> installer (<span data-dl="size">—</span>):</span></p>
+            <div class="hash" translate="no"><span data-dl="sha">—</span><button type="button" class="copy" data-copy="sha"><span lang="ru">Скопировать</span><span lang="en">Copy</span></button></div>
+            <p lang="ru">Обновления программа проверяет сама: у каждого есть цифровая подпись автора, и подменённое обновление программа не установит.</p>
+            <p lang="en">The app checks updates by itself: each one carries the author’s digital signature, and the app won’t install a tampered update.</p>
+          </div>
+        </details>
         <details>
           <summary><span lang="ru">Раньше программа называлась CS2 Coach?</span><span lang="en">Was it called CS2 Coach before?</span></summary>
           <div class="a">
