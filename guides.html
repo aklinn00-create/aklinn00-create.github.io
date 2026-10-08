@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Где хранятся демки CS2 и как скачать демку матча — Debrief</title>
+<meta name="description" content="Где лежат демки CS2, как скачать демку матча Премьер, соревновательного режима и FACEIT и как разобрать её в Debrief."
+      data-ru="Где лежат демки CS2, как скачать демку матча Премьер, соревновательного режима и FACEIT и как разобрать её в Debrief."
+      data-en="Where CS2 stores demos, how to download a Premier, Competitive or FACEIT match demo and how to review it in Debrief.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="theme-color" content="#080A0C">
+<meta name="cc-title" data-ru="Где хранятся демки CS2 и как скачать демку матча — Debrief" data-en="Where CS2 demos are stored and how to download a match demo — Debrief">
+<link rel="canonical" href="https://aklinn00-create.github.io/guides.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Debrief">
+<meta property="og:title" content="Где хранятся демки CS2 и как скачать демку матча">
+<meta property="og:description" content="Папка replays, кнопка загрузки в CS2, демки FACEIT и разбор в Debrief — по шагам. Where CS2 demos are stored and how to get them.">
+<meta property="og:url" content="https://aklinn00-create.github.io/guides.html">
+<meta property="og:image" content="https://aklinn00-create.github.io/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/logo_icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="site.css?v=f1b28d96">
+<script src="site.js?v=9fcc9fdc"></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></symbol>
+    <symbol id="i-win" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.4 10.4 4.4v7.1H3zM11.4 4.3 21 3v8.5h-9.6zM3 12.5h7.4v7.1L3 18.6zM11.4 12.5H21V21l-9.6-1.3z"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Debrief">
+      <img src="img/logo_icon.png" alt="" width="34" height="34">
+      <span class="wm">Debrief</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="index.html#features"><span lang="ru">Возможности</span><span lang="en">Features</span></a>
+      <a href="guides.html" aria-current="page"><span lang="ru">Гайды</span><span lang="en">Guides</span></a>
+      <a href="news.html"><span lang="ru">Новости</span><span lang="en">News</span></a>
+      <a href="index.html#faq"><span lang="ru">Вопросы</span><span lang="en">FAQ</span></a>
+    </nav>
+    <div class="sp"></div>
+    <div class="lang" role="group" aria-label="Язык · Language">
+      <button type="button" data-l="ru" aria-pressed="true">RU</button>
+      <button type="button" data-l="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn sm cta" href="https://github.com/aklinn00-create/cs2-reports/releases/download/app/CS2Coach_Setup.exe">
+      <svg aria-hidden="true"><use href="#i-dl"/></svg><span lang="ru">Скачать</span><span lang="en">Download</span>
+    </a>
+  </div>
+</header>
+
+<main class="doc">
+  <a class="back" href="index.html"><svg aria-hidden="true"><use href="#i-back"/></svg><span lang="ru">На главную</span><span lang="en">Back to home</span></a>
+
+  <!-- ===================== RU ===================== -->
+  <div lang="ru">
+    <h1>Демки CS2: где лежат, как скачать и разобрать</h1>
+    <p class="lead2">Короткая шпаргалка: куда игра сохраняет демки, как скачать запись своего матча из CS2 и с FACEIT и как получить по ней разбор как от тренера.</p>
+    <nav class="toc" aria-label="Содержание">
+      <a href="#where">Где хранятся демки</a>
+      <a href="#download">Как скачать демку матча</a>
+      <a href="#faceit">Демки FACEIT</a>
+      <a href="#analyze">Как разобрать демку в Debrief</a>
+    </nav>
+
+    <h2 id="where">Где хранятся демки CS2</h2>
+    <p>Демки матчей Премьер и соревновательного режима, которые ты скачал в самой игре, CS2 кладёт в папку <b>replays</b> внутри папки игры:</p>
+    <div class="path" translate="no">Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\replays</div>
+    <p>Если CS2 стоит не на диске C или в другой библиотеке Steam, проще всего открыть папку игры так: Steam → Библиотека → правой кнопкой по Counter-Strike 2 → «Свойства» → «Установленные файлы» → «Обзор». Дальше — <span class="mono">game\csgo\replays</span>. Папку replays игра создаёт сама при первой загрузке демки.</p>
+    <p>Демки с FACEIT и турнирных сайтов браузер сохраняет в «Загрузки» — обычно архивом (<span class="mono">.dem.zst</span>, <span class="mono">.gz</span>, <span class="mono">.zip</span>).</p>
+    <div class="tip"><b>Debrief</b> сам находит новые демки в папке replays и в «Загрузках» и открывает архивы без распаковки — переносить и распаковывать файлы не нужно.</div>
+
+    <h2 id="download">Как скачать демку матча Премьер или соревновательного</h2>
+    <ol>
+      <li>Открой CS2 и в главном меню нажми значок телевизора слева вверху (в английской версии раздел называется <b>Watch</b>).</li>
+      <li>Найди список своих последних матчей (<b>Your Matches</b>).</li>
+      <li>Нажми зелёную стрелку загрузки рядом с нужным матчем. Когда загрузка закончится, демка появится в папке replays.</li>
+    </ol>
+    <p>Если матча в игре нет, попробуй сайт Steam: в своём профиле открой игровые данные CS2 (<b>Personal Game Data</b>) → вкладка матчей Премьер (<b>Premier Matches</b>) → <b>Download GOTV Replay</b>.</p>
+    <p>Записи хранятся на серверах Valve ограниченное время — точный срок Valve не публикует, гайды называют около месяца. Хочешь сохранить матч — скачивай сразу.</p>
+    <div class="tip"><b>Проще:</b> войди в Debrief через Steam — программа сама скачает и разберёт твои последние матчи Премьер и соревновательного режима. Для этого должен быть запущен Steam, а CS2 — закрыта.</div>
+
+    <h2 id="faceit">Демки FACEIT</h2>
+    <ol>
+      <li>Открой страницу матча на faceit.com.</li>
+      <li>Нажми кнопку <b>Watch Demo</b> — скачается архив с демкой.</li>
+      <li>Перетащи архив в окно Debrief как есть — распаковывать не нужно.</li>
+    </ol>
+    <p>FACEIT даёт скачать демку в течение 30 дней после матча.</p>
+
+    <h2 id="analyze">Как разобрать демку в Debrief</h2>
+    <ol>
+      <li><a href="index.html">Скачай Debrief</a> и установи — права администратора не нужны.</li>
+      <li>Открой «Новый разбор» и перетащи демку в окно. Или выбери матч из списка «Твои матчи по дням» — там уже лежат демки из CS2 и «Загрузок».</li>
+      <li>Выбери себя в списке игроков (твой аккаунт отмечен ★) и нажми «Анализировать».</li>
+      <li>Примерно через полминуты откроется отчёт: оценка матча, ошибки с моментами на радаре, раунды, стрельба, гранаты, экономика и тренировка.</li>
+    </ol>
+    <p>Можно выбрать несколько демок сразу — получится общая сводка. Разобрать матч можно и за друга: в одной демке есть все 10 игроков.</p>
+    <div class="cta-row">
+      <a class="btn cta" href="index.html"><svg aria-hidden="true"><use href="#i-win"/></svg>Скачать Debrief</a>
+      <a class="btn" href="example/report-ru.html">Посмотреть пример отчёта</a>
+    </div>
+    <p class="src">Пути и кнопки — для CS2 на 8 октября 2026. Срок хранения демок FACEIT — по справке FACEIT. Debrief — независимый проект, не связан с Valve и FACEIT.</p>
+  </div>
+
+  <!-- ===================== EN ===================== -->
+  <div lang="en">
+    <h1>CS2 demos: where they are, how to download and review them</h1>
+    <p class="lead2">A short cheat sheet: where the game saves demos, how to download your match replay from CS2 and FACEIT, and how to get a coach-style review of it.</p>
+    <nav class="toc" aria-label="Contents">
+      <a href="#where-en">Where demos are stored</a>
+      <a href="#download-en">How to download a match demo</a>
+      <a href="#faceit-en">FACEIT demos</a>
+      <a href="#analyze-en">How to review a demo in Debrief</a>
+    </nav>
+
+    <h2 id="where-en">Where CS2 demos are stored</h2>
+    <p>Premier and Competitive demos you download in the game itself go to the <b>replays</b> folder inside the game folder:</p>
+    <div class="path" translate="no">Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\replays</div>
+    <p>If CS2 isn’t on drive C or sits in another Steam library, the easiest way to open the game folder: Steam → Library → right-click Counter-Strike 2 → Properties → Installed Files → Browse. Then go to <span class="mono">game\csgo\replays</span>. The game creates the replays folder itself when you download your first demo.</p>
+    <p>Demos from FACEIT and tournament sites end up in your Downloads folder — usually as an archive (<span class="mono">.dem.zst</span>, <span class="mono">.gz</span>, <span class="mono">.zip</span>).</p>
+    <div class="tip"><b>Debrief</b> finds new demos in the replays folder and in Downloads by itself and opens archives without unpacking — no need to move or extract files.</div>
+
+    <h2 id="download-en">How to download a Premier or Competitive match demo</h2>
+    <ol>
+      <li>Open CS2 and click the TV icon in the top-left of the main menu (<b>Watch</b>).</li>
+      <li>Find the list of your recent matches (<b>Your Matches</b>).</li>
+      <li>Click the green download arrow next to the match. When the download finishes, the demo appears in the replays folder.</li>
+    </ol>
+    <p>If the match isn’t in the game, try the Steam website: in your profile open the CS2 <b>Personal Game Data</b> → <b>Premier Matches</b> → <b>Download GOTV Replay</b>.</p>
+    <p>Replays stay on Valve’s servers for a limited time — Valve doesn’t publish the exact window, guides say about a month. Want to keep a match — download it right away.</p>
+    <div class="tip"><b>Easier:</b> sign in to Debrief with Steam — the app downloads and reviews your recent Premier and Competitive matches by itself. Steam needs to be running and CS2 closed.</div>
+
+    <h2 id="faceit-en">FACEIT demos</h2>
+    <ol>
+      <li>Open the match page on faceit.com.</li>
+      <li>Click <b>Watch Demo</b> — an archive with the demo downloads.</li>
+      <li>Drag the archive into the Debrief window as is — no need to unpack it.</li>
+    </ol>
+    <p>FACEIT lets you download a demo for 30 days after the match.</p>
+
+    <h2 id="analyze-en">How to review a demo in Debrief</h2>
+    <ol>
+      <li><a href="index.html?lang=en">Download Debrief</a> and install it — no admin rights needed.</li>
+      <li>Open “New analysis” and drag the demo into the window. Or pick a match from “Your matches by day” — demos from CS2 and Downloads are already there.</li>
+      <li>Pick yourself in the player list (your account is marked ★) and click “Analyze”.</li>
+      <li>In about half a minute the report opens: match grade, mistakes with the moments on the radar, rounds, shooting, grenades, economy and practice.</li>
+    </ol>
+    <p>You can pick several demos at once to get a combined summary. You can also review a match for a friend: one demo has all 10 players.</p>
+    <div class="cta-row">
+      <a class="btn cta" href="index.html?lang=en"><svg aria-hidden="true"><use href="#i-win"/></svg>Download Debrief</a>
+      <a class="btn" href="example/report-en.html">See an example report</a>
+    </div>
+    <p class="src">Paths and buttons are for CS2 as of October 8, 2026. The FACEIT demo window is from FACEIT’s help center. Debrief is an independent project, not affiliated with Valve or FACEIT.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Debrief">
+      <img src="img/logo_icon.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:8px">
+      <span class="wm" style="font-size:15px">Debrief</span>
+      <span>· by Aklinn</span>
+    </a>
+    <nav aria-label="Ссылки">
+      <a href="index.html#features"><span lang="ru">Возможности</span><span lang="en">Features</span></a>
+      <a href="news.html"><span lang="ru">Новости</span><span lang="en">News</span></a>
+      <a href="changelog.html"><span lang="ru">История версий</span><span lang="en">Version history</span></a>
+      <a href="index.html#faq"><span lang="ru">Вопросы</span><span lang="en">FAQ</span></a>
+      <a href="privacy.html"><span lang="ru">Конфиденциальность</span><span lang="en">Privacy</span></a>
+    </nav>
+    <p class="legal" lang="ru">Debrief — независимый проект, не связан с Valve Corporation. Counter-Strike и CS2 — товарные знаки Valve Corporation.</p>
+    <p class="legal" lang="en">Debrief is an independent project, not affiliated with Valve Corporation. Counter-Strike and CS2 are trademarks of Valve Corporation.</p>
+  </div>
+</footer>
+</body>
+</html>

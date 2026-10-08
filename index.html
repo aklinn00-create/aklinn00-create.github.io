@@ -7,15 +7,28 @@
 <meta name="description" content="Бесплатная программа для Windows: сама скачивает твои матчи CS2, находит ошибки, показывает моменты на радаре, даёт тренировку в игре и записывает ролики лучших моментов."
       data-ru="Бесплатная программа для Windows: сама скачивает твои матчи CS2, находит ошибки, показывает моменты на радаре, даёт тренировку в игре и записывает ролики лучших моментов."
       data-en="Free Windows app: downloads your CS2 matches by itself, finds your mistakes, shows each moment on the radar, gives in-game drills and records clips of your best plays.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="theme-color" content="#080A0C">
+<meta name="cc-title" data-ru="Debrief — разбор демок CS2 как от тренера" data-en="Debrief — CS2 demo review like a coach would">
+<link rel="canonical" href="https://aklinn00-create.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Debrief">
-<meta property="og:description" content="Разбор демок CS2 как от тренера · CS2 demo review like a coach would">
+<meta property="og:site_name" content="Debrief">
+<meta property="og:title" content="Debrief — разбор демок CS2 как от тренера">
+<meta property="og:description" content="Бесплатная программа для Windows: ошибки на радаре, тренировка в игре, ролики лучших моментов. Free CS2 demo review app.">
+<meta property="og:url" content="https://aklinn00-create.github.io/">
+<meta property="og:image" content="https://aklinn00-create.github.io/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Debrief — разбор демок CS2 как от тренера: отчёт по матчу с оценкой, K/D, ADR и рейтингом">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="img/logo_icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preload" href="fonts/font-unbounded-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="site.css?v=2faea897">
-<script>window.CC_TITLES={ru:"Debrief — разбор демок CS2 как от тренера",en:"Debrief — CS2 demo review like a coach would"}</script>
-<script src="site.js?v=73375a49"></script>
+<link rel="stylesheet" href="site.css?v=f1b28d96">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Debrief","url":"https://aklinn00-create.github.io/","description":"Бесплатная программа для Windows: разбор демок CS2 как от тренера — ошибки на радаре, тренировка в игре, ролики лучших моментов. Free Windows app that reviews your CS2 demos like a coach.","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10, Windows 11","inLanguage":["ru","en"],"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://github.com/aklinn00-create/cs2-reports/releases/download/app/CS2Coach_Setup.exe","image":"https://aklinn00-create.github.io/img/og.jpg","screenshot":"https://aklinn00-create.github.io/img/app_dash_ru.webp","author":{"@type":"Person","name":"Aklinn"}}</script>
+<script src="site.js?v=9fcc9fdc"></script>
 <script src="news.js?v=e5cb65cf"></script>
 </head>
 <body>
@@ -36,6 +49,7 @@
     <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5 10 14"/><path d="M20.5 3.5 14 20.5l-4-6.5-6.5-4z"/></symbol>
   </defs>
 </svg>
 
@@ -48,6 +62,7 @@
     <nav class="nav" aria-label="Разделы">
       <a href="#features"><span lang="ru">Возможности</span><span lang="en">Features</span></a>
       <a href="#how"><span lang="ru">Как начать</span><span lang="en">Get started</span></a>
+      <a href="guides.html"><span lang="ru">Гайды</span><span lang="en">Guides</span></a>
       <a href="news.html"><span lang="ru">Новости</span><span lang="en">News</span></a>
       <a href="#faq"><span lang="ru">Вопросы</span><span lang="en">FAQ</span></a>
     </nav>
@@ -75,15 +90,25 @@
           <a class="btn big cta" href="https://github.com/aklinn00-create/cs2-reports/releases/download/app/CS2Coach_Setup.exe" data-dl="note1">
             <svg aria-hidden="true"><use href="#i-win"/></svg><span lang="ru">Скачать для Windows</span><span lang="en">Download for Windows</span>
           </a>
-          <a class="btn big" href="#features"><span lang="ru">Что умеет</span><span lang="en">What it does</span></a>
+          <a class="btn big" lang="ru" href="example/report-ru.html">Посмотреть пример отчёта</a>
+          <a class="btn big" lang="en" href="example/report-en.html">See an example report</a>
         </div>
         <p class="pc-only" lang="ru">Это программа для компьютера с Windows — открой страницу на ПК, чтобы скачать.</p>
         <p class="pc-only" lang="en">This is a Windows PC app — open this page on your computer to download it.</p>
+        <button type="button" class="btn big share-pc" data-share="share-ok">
+          <svg aria-hidden="true"><use href="#i-send"/></svg><span lang="ru">Отправить ссылку себе на ПК</span><span lang="en">Send the link to my PC</span>
+        </button>
+        <p class="share-ok" id="share-ok" role="status" hidden>
+          <span data-ok lang="ru">Ссылка скопирована — отправь её себе в мессенджер или почту.</span><span data-ok lang="en">Link copied — send it to yourself in a messenger or by email.</span>
+          <span data-fail lang="ru">Скопируй ссылку и отправь её себе в мессенджер или почту:</span><span data-fail lang="en">Copy the link and send it to yourself in a messenger or by email:</span>
+          <b class="mono share-url" data-url></b>
+        </p>
         <div class="meta">
           <span><svg aria-hidden="true"><use href="#i-gift"/></svg><span lang="ru">Бесплатно, без рекламы</span><span lang="en">Free, no ads</span></span>
           <span><svg aria-hidden="true"><use href="#i-win"/></svg><span lang="ru">Windows 10 / 11, 64-бит</span><span lang="en">Windows 10 / 11, 64-bit</span></span>
           <span><svg aria-hidden="true"><use href="#i-disk"/></svg><span lang="ru">≈100 МБ</span><span lang="en">≈100 MB</span></span>
           <span><svg aria-hidden="true"><use href="#i-globe"/></svg><span lang="ru">Русский · English</span><span lang="en">English · Русский</span></span>
+          <span class="dlc" data-dlc hidden><svg aria-hidden="true"><use href="#i-dl"/></svg><span lang="ru">Скачиваний:</span><span lang="en">Downloads:</span><b data-dlc-n>—</b></span>
           <span><svg aria-hidden="true"><use href="#i-shield"/></svg><a class="vlink" href="#verify" data-open="verify"><span lang="ru">Версия <b data-dl="ver">2.6.1</b> · проверить подлинность</span><span lang="en">Version <b data-dl="ver">2.6.1</b> · verify the file</span></a></span>
         </div>
         <div class="dl-note" id="note1" role="status">
@@ -187,6 +212,8 @@
             <li><svg aria-hidden="true"><use href="#i-check"/></svg>Your numbers vs your lobby and pro level</li>
             <li><svg aria-hidden="true"><use href="#i-check"/></svg>Opens in a browser, works offline, saves to PDF</li>
           </ul>
+          <a class="btn ex-btn" lang="ru" href="example/report-ru.html">Открыть пример отчёта<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn ex-btn" lang="en" href="example/report-en.html">Open the example report<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
         <div class="frame rv">
           <img lang="ru" src="img/report_ru.webp" width="1120" height="1000" loading="lazy" alt="Отчёт по матчу: оценка, K/D, ADR, рейтинг 2.0 и разбор по направлениям">
@@ -244,8 +271,8 @@
         </div>
         <div class="phone-wrap rv">
           <div class="phone">
-            <img lang="ru" src="img/vertical_ru.webp" width="540" height="960" loading="lazy" alt="Кадр вертикального ролика: 3K на Dust2">
-            <img lang="en" src="img/vertical_en.webp" width="540" height="960" loading="lazy" alt="Vertical clip frame: 3K on Dust2">
+            <video lang="ru" data-auto src="video/hl_ru.mp4" poster="img/vertical_ru.webp" width="540" height="960" muted loop playsinline preload="none" aria-label="Вертикальный ролик Highlight: 3K на Dust2. Нажми, чтобы остановить или продолжить" title="Нажми — пауза"></video>
+            <video lang="en" data-auto src="video/hl_en.mp4" poster="img/vertical_en.webp" width="540" height="960" muted loop playsinline preload="none" aria-label="Vertical Highlight clip: 3K on Dust2. Click to pause or resume" title="Click to pause"></video>
           </div>
         </div>
       </div>
@@ -376,6 +403,8 @@
           <div class="a">
             <p lang="ru">Любые демки CS2 (.dem): Премьер, соревновательный, FACEIT, турнирные — и архивы .zst, .gz, .bz2, .zip, .rar. Демки CS:GO не поддерживаются.</p>
             <p lang="en">Any CS2 demo (.dem): Premier, Competitive, FACEIT, tournament — plus .zst, .gz, .bz2, .zip, .rar archives. CS:GO demos are not supported.</p>
+            <p lang="ru">Где лежат демки и как скачать матч — в <a class="vlink" href="guides.html">гайде</a>.</p>
+            <p lang="en">Where demos are stored and how to download a match — see the <a class="vlink" href="guides.html">guide</a>.</p>
           </div>
         </details>
         <details>
@@ -431,7 +460,9 @@
     </a>
     <nav aria-label="Ссылки">
       <a href="#features"><span lang="ru">Возможности</span><span lang="en">Features</span></a>
+      <a href="guides.html"><span lang="ru">Гайды</span><span lang="en">Guides</span></a>
       <a href="news.html"><span lang="ru">Новости</span><span lang="en">News</span></a>
+      <a href="changelog.html"><span lang="ru">История версий</span><span lang="en">Version history</span></a>
       <a href="#faq"><span lang="ru">Вопросы</span><span lang="en">FAQ</span></a>
       <a href="privacy.html"><span lang="ru">Конфиденциальность</span><span lang="en">Privacy</span></a>
     </nav>
