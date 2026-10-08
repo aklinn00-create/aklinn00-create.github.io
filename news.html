@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Debrief — новости CS2</title>
+<meta name="description" content="Свежие новости CS2: HLTV, обновления игры от Valve и новости на русском. Обновляются сами."
+      data-ru="Свежие новости CS2: HLTV, обновления игры от Valve и новости на русском. Обновляются сами."
+      data-en="Fresh CS2 news: HLTV, game updates from Valve and news in Russian. Updated automatically.">
+<meta name="theme-color" content="#080A0C">
+<link rel="icon" type="image/png" href="img/logo_icon.png">
+<link rel="stylesheet" href="site.css">
+<script>window.CC_TITLES={ru:"Debrief — новости CS2",en:"Debrief — CS2 news"}</script>
+<script src="site.js"></script>
+<script src="news.js"></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Debrief">
+      <img src="img/logo_icon.png" alt="" width="34" height="34">
+      <span class="wm">Debrief</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="index.html#features"><span lang="ru">Возможности</span><span lang="en">Features</span></a>
+      <a href="news.html" aria-current="page"><span lang="ru">Новости</span><span lang="en">News</span></a>
+      <a href="index.html#faq"><span lang="ru">Вопросы</span><span lang="en">FAQ</span></a>
+    </nav>
+    <div class="sp"></div>
+    <div class="lang" role="group" aria-label="Язык · Language">
+      <button type="button" data-l="ru" aria-pressed="true">RU</button>
+      <button type="button" data-l="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn sm cta" href="https://github.com/aklinn00-create/cs2-reports/releases/download/app/CS2Coach_Setup.exe">
+      <svg aria-hidden="true"><use href="#i-dl"/></svg><span lang="ru">Скачать</span><span lang="en">Download</span>
+    </a>
+  </div>
+</header>
+
+<main class="newsp">
+  <div class="wrap">
+    <div class="sh">
+      <div class="lab"><span lang="ru">Новости</span><span lang="en">News</span></div>
+      <h1><span lang="ru">Новости CS2</span><span lang="en">CS2 news</span></h1>
+      <p lang="ru">Обновляются сами каждые полчаса: HLTV, обновления игры от Valve и новости на русском. Здесь — заголовки, сами статьи открываются на сайтах источников.</p>
+      <p lang="en">Updated automatically every half hour: HLTV, game updates from Valve and news in Russian. Here are the headlines — the articles open on the sources’ sites.</p>
+    </div>
+    <div class="nfilter" id="news-filter" role="group" aria-label="Фильтр · Filter">
+      <button type="button" data-f="all" aria-pressed="true"><span lang="ru">Все</span><span lang="en">All</span></button>
+      <button type="button" data-f="hltv" aria-pressed="false">HLTV</button>
+      <button type="button" data-f="valve" aria-pressed="false"><span lang="ru">Обновления CS2</span><span lang="en">CS2 updates</span></button>
+      <button type="button" data-f="ru" aria-pressed="false"><span lang="ru">На русском</span><span lang="en">In Russian</span></button>
+      <button type="button" data-f="debrief" aria-pressed="false">Debrief</button>
+      <span class="nupd" id="news-updated" aria-live="polite"></span>
+    </div>
+    <div class="ngrid" id="news-list" aria-live="polite">
+      <div class="ncard skel"></div><div class="ncard skel"></div><div class="ncard skel"></div>
+    </div>
+    <p class="nnote" lang="ru">Заголовки собираются из Google Новостей и Steam; статьи принадлежат их авторам. Букмекеров и новости о ставках не показываем. Лента загружается с сервера Debrief (Google Apps Script) — данные о посетителях не сохраняются.</p>
+    <p class="nnote" lang="en">Headlines come from Google News and Steam; the articles belong to their authors. We don’t show bookmakers or betting news. The feed loads from the Debrief server (Google Apps Script) — no visitor data is stored.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Debrief">
+      <img src="img/logo_icon.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:8px">
+      <span class="wm" style="font-size:15px">Debrief</span>
+      <span>· by Aklinn</span>
+    </a>
+    <nav aria-label="Ссылки">
+      <a href="index.html#features"><span lang="ru">Возможности</span><span lang="en">Features</span></a>
+      <a href="index.html#faq"><span lang="ru">Вопросы</span><span lang="en">FAQ</span></a>
+      <a href="privacy.html"><span lang="ru">Конфиденциальность</span><span lang="en">Privacy</span></a>
+    </nav>
+    <p class="legal" lang="ru">Debrief — независимый проект, не связан с Valve Corporation. Counter-Strike и CS2 — товарные знаки Valve Corporation.</p>
+    <p class="legal" lang="en">Debrief is an independent project, not affiliated with Valve Corporation. Counter-Strike and CS2 are trademarks of Valve Corporation.</p>
+  </div>
+</footer>
+</body>
+</html>
