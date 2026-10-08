@@ -7,6 +7,7 @@
   var NAMES = { hltv: ["HLTV", "HLTV"], valve: ["Обновления CS2", "CS2 updates"], ru: ["На русском", "In Russian"],
                 debrief: ["Debrief", "Debrief"] };
   var ALL = [], FILTER = "all";
+  var SKIP = /sport\.ua/i;        // источники, которые не показываем (08.10.2026, Aklinn: «новости с sport.ua не брать»)
 
   function L() { return document.documentElement.lang === "en" ? 1 : 0; }
   function ago(iso) {
@@ -87,7 +88,9 @@
       .catch(function () { return null; });
     Promise.all([news, dl]).then(function (res) {
       var items = (res[0] && res[0].items) || [];
-      ALL = items.filter(function (x) { return x && typeof x.t === "string" && x.f !== "debrief" && NAMES[x.f]; });
+      ALL = items.filter(function (x) {
+        return x && typeof x.t === "string" && x.f !== "debrief" && NAMES[x.f] && !SKIP.test(String(x.s || ""));
+      });
       window.__dl = res[1];
       var up = document.getElementById("news-updated");
       if (up && res[0] && res[0].updated) up.textContent = (L() ? "Updated " : "Обновлено ") + ago(res[0].updated);
