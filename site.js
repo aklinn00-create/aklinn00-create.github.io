@@ -18,7 +18,10 @@
     var bs = document.querySelectorAll(".lang button");
     for (var i = 0; i < bs.length; i++) bs[i].setAttribute("aria-pressed", String(bs[i].getAttribute("data-l") === v));
   }
-  window.ccLang = function (v) { store(v); apply(v); };
+  window.ccLang = function (v) {
+    store(v); apply(v);
+    try { document.dispatchEvent(new Event("cc-lang")); } catch (e) {}     // новости перерисуют даты и подписи
+  };
   apply(guess());
   document.documentElement.classList.add("js");
 
