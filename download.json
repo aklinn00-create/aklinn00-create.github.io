@@ -1,19 +1,16 @@
 {
- "version": "v2.6.1",
- "size": 104317198,
- "sha256": "f4c9b10d3effea3abd12d85e5099e259987fd851346610c2ba95a5c43b191177",
- "build": 1791434619,
+ "version": "v2.6.2",
+ "size": 104318095,
+ "sha256": "8f27449c4bd56aa14fd168c080378aae468c2c9203ba6229eb9e19cefcddae52",
+ "build": 1791480226,
  "date": "2026-10-08",
  "notes": {
   "ru": [
-   "Программа больше не спрашивает почту: для регистрации хватит ника (и Steam, если хочешь). Почта, указанная раньше, удалена с твоего компьютера и больше никуда не отправляется.",
-   "Настройки → внизу: «Конфиденциальность» — что видит автор программы, и «Лицензии» — список открытых компонентов, из которых собран Debrief.",
-   "«Проверка игрока»: ещё раз честно напоминаем, что индекс по демке — это признаки, а не доказательство читов."
+   "Статистика — только с твоего согласия: программа один раз спросит, можно ли отправлять автору статистику использования. Не разрешишь — не уйдёт ничего, даже ник. Передумать можно в Настройках → «Мой профиль»."
   ],
   "en": [
-   "The app no longer asks for your email: a nickname (and Steam, if you like) is enough to register. An email you entered before has been removed from your computer and is no longer sent anywhere.",
-   "Settings → at the bottom: “Privacy” — what the app's author sees, and “Licenses” — the open components Debrief is built from.",
-   "“Player check”: an honest reminder that the demo index shows signs, not proof of cheating."
+   "Statistics only with your consent: the app asks once whether it may send usage statistics to the author. If you don't allow it, nothing is sent — not even your nickname. You can change your mind in Settings → “My profile”."
   ]
- }
+ },
+ "dl_base": 3
 }
