@@ -164,6 +164,19 @@ section{padding:88px 0}
 .faq details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
 .faq .a{color:#BFC5CB;font-size:15px;padding-bottom:20px}
 .faq .a p+p{margin-top:10px}
+.meta .vlink span{display:inline}
+.vlink{color:inherit;text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px}
+.vlink:hover{color:var(--text);text-decoration-color:var(--acc)}
+.dl-safe{margin-top:8px!important;color:var(--muted)}
+.dl-safe a{color:var(--text)}
+.cmd,.hash{font:13px/1.5 var(--mono);font-stretch:87.5%;background:var(--surf2);border:1px solid var(--line2);border-radius:10px;
+  padding:10px 12px;margin:8px 0 12px;overflow-wrap:anywhere;word-break:break-all;color:var(--text)}
+.hash{display:flex;gap:10px;align-items:center;justify-content:space-between}
+.hash span[data-dl]{min-width:0}
+.copy{flex:none;font:600 12px/1 var(--sans);color:var(--text);background:var(--surf);border:1px solid var(--line2);border-radius:8px;
+  padding:8px 10px;cursor:pointer}
+.copy:hover{border-color:#3d444b}
+.copy.ok{border-color:var(--ok);color:var(--ok)}
 .faq code{white-space:nowrap;font-family:var(--mono);font-size:13px;background:var(--surf2);border:1px solid var(--line2);border-radius:6px;padding:1px 6px}
 
 /* финальный призыв */
